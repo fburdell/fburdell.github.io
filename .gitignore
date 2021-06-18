@@ -1,3 +1,5 @@
 *.swp*
 *stdout*
 
+
+# git push origin HEAD:master 
