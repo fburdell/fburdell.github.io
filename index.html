@@ -47,7 +47,7 @@
     <div class="d-flex flex-column">
 
       <div class="profile">
-      <img src="assets/img/profile-img.jpg" alt="" class="img-fluid rounded-circle"> <!--circle img-->
+      <img src="assets/img/river.jpg" alt="" class="img-fluid rounded-circle"> <!--circle img-->
         <h1 class="text-light"><a href="index.html">Frank Burdell</a></h1>
         <div class="social-links mt-3 text-center">
           <a href="#" class="github"><i class="bx bxl-github"></i></a>
@@ -89,10 +89,10 @@
 
         <div class="row">
           <div class="col-lg-4" data-aos="fade-right">
-	  <img src="assets/img/profile-img.jpg" class="img-fluid" alt=""> <!-- about section picture-->
+	  <img src="assets/img/woods.jpg" class="img-fluid" alt=""> <!-- about section picture-->
           </div>
           <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
-            <h3>UI/UX Designer &amp; Web Developer.</h3>
+            <h3>civic and political systems and operations</h3>
             <p class="font-italic">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
               magna aliqua.
@@ -153,7 +153,38 @@
 			    <main>
 			    </main>
 
-		<div id="objs">
+		<div id="objs" src=>
+
+  <script> 
+ 	//const objs = ["alpha", "beta", "gama", "epsilon"]; 
+	//let objsLen = objs.length; 
+	//
+	//let starter = "<div id='obj'>"; 
+	//for (i = 0; i < objsLen; i++) {
+	//	starter += "<div id='obj1'>" + objs[i] + "</div>"
+	//}
+	//starter += "</div>"
+	//
+	//document.getElementById("objs").innerHTML = starter
+
+	function loadBlog(src, callback) { 
+		let blog = document.createElement("blog");
+		blog.src = src;
+	
+		blog.onload = () => callback(blog);
+		} 
+
+
+		document.head.append(blog);
+
+	let p = 'file:///home/frank/proj/fburdell.github.io/blog.json';
+
+	loadBlog(p, function())
+
+
+  </script> 
+
+
 		</div>
 
                     <!-- Post preview-->
@@ -182,22 +213,6 @@
 
   </main><!-- End #main -->
 
-  <script> 
- 	const objs = ["alpha", "beta", "gama", "epsilon"]; 
-	let objsLen = objs.length; 
-	
-	let starter = "<div id='obj'>"; 
-	for (i = 0; i < objsLen; i++) {
-		starter += "<div id='obj1'>" + objs[i] + "</div>"
-	}
-	starter += "</div>"
-	
-	document.getElementById("objs").innerHTML = starter
-
-	fetch('file:///home/frank/proj/fburdell.github.io/blog.json')
-		.then(response => response.json())
-		.then(document.getElementById("objs").innerHTML = "hello")
-  </script> 
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/aos/aos.js"></script>
