@@ -170,9 +170,16 @@
 <script>
   var jsonBlog  = 'https://fburdell.github.io/blogs/blog.json'
   $.getJSON(jsonBlog, function( data ) { 
-	//document.getElementById("myBlog").innerHTML = JSON.stringify(data)
-	for (entry in data)	 { 
-		document.getElementById("myBlog").innerHTML = JSON.stringify(entry)
+ 	for (let i=0; i < data.length; i++)	 { 
+		var li = document.createElement("div"); 
+		var j = JSON.stringify(data[i]);
+		j = j
+		console.log(JSON.parse(j).results[0]["post"])
+		var txt = document.createTextNode(j);
+		//var txt = JSON.parse(JSON.stringify(data[i])).getItem('post');
+		li.appendChild(txt)
+		document.getElementById("myBlog").appendChild(li);
+
 } 
 });
 
@@ -181,7 +188,7 @@
 
 
   <!-- Vendor JS Files -->
-  <script src="assets/vendor/aos/aos.js"></script>
+  w<script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>

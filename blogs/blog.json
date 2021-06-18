@@ -1,21 +1,21 @@
 [{
     "results": [{
-        "date": "02-17-1992",
+        "dt": "02-17-1992",
         "post": "something"
     }]
 }, {
     "results": [{
-        "date": "02-27-1992",
+        "dt": "02-27-1992",
         "post": "something new"
     }]
 }, {
     "results": [{
-        "date": "01-29-1995",
+        "dt": "01-29-1995",
         "post": "something more"
     }]
 }, {
     "results": [{
-        "date": "09-28-1990",
+        "dt": "09-28-1990",
         "post": "something else"
     }]
 }]  
