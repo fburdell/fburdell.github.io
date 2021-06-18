@@ -33,8 +33,10 @@
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   wow look at my sick web dev skillz!!111!!!
+	<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
   ======================================================== -->
-
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	
 </head>
 
 <body>
@@ -153,58 +155,8 @@
 			    <main>
 			    </main>
 
-		<div id="objs" src=>
-
-  <script> 
- 	//const objs = ["alpha", "beta", "gama", "epsilon"]; 
-	//let objsLen = objs.length; 
-	//
-	//let starter = "<div id='obj'>"; 
-	//for (i = 0; i < objsLen; i++) {
-	//	starter += "<div id='obj1'>" + objs[i] + "</div>"
-	//}
-	//starter += "</div>"
-	//
-	//document.getElementById("objs").innerHTML = starter
-
-	function loadBlog(src, callback) { 
-		let blog = document.createElement("blog");
-		blog.src = src;
-	
-		blog.onload = () => callback(blog);
-		} 
-
-
-		document.head.append(blog);
-
-
-	let p = 'file:///home/frank/proj/fburdell.github.io/blog.json';
-
-	loadBlog(p, function())
-
-
-  </script> 
-
-
-		</div>
-
-                    <!-- Post preview-->
-
-                    <!-- <div class="post-preview">
-                        <a href="post.html">
-                            <h3 class="post-title">a post</h3>
-                        </a>
-                        <p class="post-meta">
-				today
-                        </p>
-                    </div>
-			Divider
-                    <hr class="my-4">
-			Preview
-                    <div class="d-flex justify-content-end mb-4"><a class="btn btn-primary text-uppercase" href="#!">Older Posts →</a></div> --> 
-                </div>
-            </div>
-		</iframe>
+			<div id="myBlog"></div>
+			<div id="images"></div>
 
 		    </div>
 	    </div>
@@ -213,6 +165,16 @@
 
 
   </main><!-- End #main -->
+
+ 
+<script>
+  var jsonBlog  = 'https://fburdell.github.io/blogs/blog.json'
+  $.getJSON(jsonBlog, function( data ) { 
+	document.getElementById("myBlog").innerHTML = JSON.stringify(data)
+});
+
+
+</script>
 
 
   <!-- Vendor JS Files -->

@@ -1,8 +1,6 @@
 {
 	"01-01-2020" : { "title" : "a thing" ,
 		"body" : "something else" }, 
-
 	"01-02-2020" : { "title" : "another thing", 
 		"body" : "more something else" } 
-
 	}
