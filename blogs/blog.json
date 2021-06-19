@@ -1,29 +1,8 @@
 [{
-    "results": [{
-	"title": "a title", 
+    "2021-6-18": [{
+	"title": "Why say anything at all", 
 	"preview":"",
-        "dt": "02-17-1992",
-        "post": "something"
-    }]
-}, {
-    "results": [{
-	"title": "another title",
-	"preview":"",
-        "dt": "02-27-1992",
-        "post": "something new"
-    }]
-}, {
-    "results": [{
-	"title": "some title",
-	"preview":"",
-        "dt": "01-29-1995",
-        "post": "something more"
-    }]
-}, {
-    "results": [{
-	"title": "not a title", 
-	"preview":"",
-        "dt": "09-28-1990",
+        "dt": "18 June 2021",
         "post": "something else"
     }]
 }]  
