@@ -152,8 +152,9 @@
 	    <div class="container">
 		    <div class="section-title">
 			    <h2>ramblings</h2>
-			    <main>
-			    </main>
+
+                    <hr class="my-4"> <!-- divider-->
+                    <div class="d-flex justify-content-end mb-4"><a class="btn btn-primary text-uppercase" href="#!">Older Posts →</a></div> <!--preview-->
 
 			<div id="myBlog"></div>
 			<div id="images"></div>
@@ -166,19 +167,44 @@
 
   </main><!-- End #main -->
 
- 
+<!--                   <div class="post-preview">
+                        <a href="post.html">
+                            <h3 class="post-title">a post</h3>
+                        </a>
+                        <p class="post-meta">
+				today
+                        </p>
+                    </div>-->
 <script>
   var jsonBlog  = 'https://fburdell.github.io/blogs/blog.json'
   $.getJSON(jsonBlog, function( data ) { 
+
+
  	for (let i=0; i < data.length; i++)	 { 
-		var li = document.createElement("div"); 
+		var blogPost = document.createElement("div"); 
+		blogPost.className = "post-preview";
+
+		var blogTitle = document.createElement("h3");
+		blogTitle.className = "post-title"
+
+		var blogBody = document.createElement("p"); 
+		blogBody.className = "post-meta"
+
 		var j = JSON.stringify(data[i]);
-		j = j
-		console.log(JSON.parse(j).results[0]["post"])
-		var txt = document.createTextNode(j);
-		//var txt = JSON.parse(JSON.stringify(data[i])).getItem('post');
-		li.appendChild(txt)
-		document.getElementById("myBlog").appendChild(li);
+
+		post = JSON.parse(j).results[0]["post"];
+		title = JSON.parse(j).results[0]["title"];
+		dt = JSON.parse(j).results[0]["dt"];
+
+		blogTitle.innerHTML += title;
+	
+		var txt = document.createTextNode(blogTitle);
+		
+		//var txt = document.createTextNode((dt + post)); // put the blog post together
+		blogPost.appendChild(txt); // add the blog post to the list of blog posts
+
+
+		document.getElementById("myBlog").appendChild(blogPost); // add blog post to the document
 
 } 
 });
