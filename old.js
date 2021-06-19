@@ -2,6 +2,7 @@
 
 
 let path_blog = 'https://github.com/fburdell/fburdell.github.io/blob/master/blogs/blog.json'
+ou
 var containerBlog = document.getElementById("myBlog")
 	
 fetch(pathBlog)

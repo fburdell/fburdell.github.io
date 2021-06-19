@@ -85,8 +85,10 @@
       <div class="container">
 
         <div class="section-title">
-          <h2>about</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+          <h2>About</h2>
+          <p>Hello, my name is Frank. I grew up in northern Virginia and currently reside in central Pennsylvania.</p>
+		<br></br>
+	  <p>I competed springboard in college and fell in love with print making at some point. My early addiction to philosophy has lead me down the rabbit hole of maths-- particularly statistics, and imperfect-information environments.</p>
         </div>
 
         <div class="row">
@@ -94,16 +96,12 @@
 	  <img src="assets/img/woods.jpg" class="img-fluid" alt=""> <!-- about section picture-->
           </div>
           <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
-            <h3>civic and political systems and operations</h3>
+            <h3>civic systems and analysis</h3>
             <p class="font-italic">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-              magna aliqua.
+		I work as a systems analyst with federal legislative clients redesigning technical stacks. Previously, I worked as a technical director at a caucus, and manager for a series of competitive state-office races. 
             </p>
 
-            <p>
-              Officiis eligendi itaque labore et dolorum mollitia officiis optio vero. Quisquam sunt adipisci omnis et ut. Nulla accusantium dolor incidunt officia tempore. Et eius omnis.
-              Cupiditate ut dicta maxime officiis quidem quia. Sed et consectetur qui quia repellendus itaque neque. Aliquid amet quidem ut quaerat cupiditate. Ab et eum qui repellendus omnis culpa magni laudantium dolores.
-            </p>
+            <p></p>
           </div>
         </div>
 
@@ -115,8 +113,8 @@
       <div class="container">
 
         <div class="section-title">
-          <h2>projects</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+          <h2>Projects</h2>
+          <p>These are some of the things I've done...</p>
         </div>
 
         <div class="row" data-aos="fade-up">
@@ -125,18 +123,17 @@
               <li data-filter="*" class="filter-active">All</li>
               <li data-filter=".filter-app">Analysis</li>
               <li data-filter=".filter-card">Design</li>
-              <li data-filter=".filter-web">Measurement</li>
+              <li data-filter=".filter-web">Other</li>
             </ul>
           </div>
         </div>
 
 	<!-- begin portfolio card-->
-        <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="100">
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+        <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="50">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
             <div class="portfolio-wrap">
               <img src="assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="">
               <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><i class="bx bx-plus"></i></a>
                 <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
               </div>
             </div>
@@ -151,11 +148,12 @@
     <section id="blog" class="portfolio section-bg">
 	    <div class="container">
 		    <div class="section-title">
-			    <h2>ramblings</h2>
+			    <h2>Ramblings</h2>
 
-                    <hr class="my-4"> <!-- divider-->
-                    <div class="d-flex justify-content-end mb-4"><a class="btn btn-primary text-uppercase" href="#!">Older Posts →</a></div> <!--preview-->
+i love you julie
 
+
+			<!--<hr class="my-4">  divide for blog?-->
 			<div id="myBlog"></div>
 			<div id="images"></div>
 
@@ -181,27 +179,43 @@
 
 
  	for (let i=0; i < data.length; i++)	 { 
-		var blogPost = document.createElement("div"); 
-		blogPost.className = "post-preview";
-
-		var blogTitle = document.createElement("h3");
-		blogTitle.className = "post-title"
-
-		var blogBody = document.createElement("p"); 
-		blogBody.className = "post-meta"
 
 		var j = JSON.stringify(data[i]);
-
-		post = JSON.parse(j).results[0]["post"];
+		body = JSON.parse(j).results[0]["post"];
 		title = JSON.parse(j).results[0]["title"];
 		dt = JSON.parse(j).results[0]["dt"];
 
-		blogTitle.innerHTML += title;
+		var blogPost = document.createElement("div"); 
+		blogPost.className = "post-preview"; // over arching class for all to be appended to 
+		// do not write anything to this
+
+		var blogTitle = document.createElement("h3");
+		blogTitle.className = "post-title";
+		var txtTitle = document.createTextNode(title);
+		blogTitle.appendChild(txtTitle);
+
+		var blogDate = document.createElement("h5"); 
+		blogDate.className = "post-subtitle";
+		var txtBody = document.createTextNode(dt);
+		blogDate.appendChild(txtBody);
+
+		var blogBody = document.createElement("p"); 
+		blogBody.className = "post-meta";
+		var txtBody = document.createTextNode(body);
+		blogBody.appendChild(txtBody);
+
+		var blogLiner = document.createElement("hr");
+		blogLiner.className = "my-4";
 	
-		var txt = document.createTextNode(blogTitle);
-		
-		//var txt = document.createTextNode((dt + post)); // put the blog post together
-		blogPost.appendChild(txt); // add the blog post to the list of blog posts
+
+
+		var bp = blogTitle.appendChild(blogBody);
+		console.log(typeof bp);
+	
+		blogPost.appendChild(blogTitle); // add the blog post to the list of blog posts
+		blogPost.appendChild(blogDate); // add the blog post to the list of blog posts
+		blogPost.appendChild(blogBody); // add the blog post to the list of blog posts
+		blogPost.appendChild(blogLiner); // add the blog post to the list of blog posts
 
 
 		document.getElementById("myBlog").appendChild(blogPost); // add blog post to the document
