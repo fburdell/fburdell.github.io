@@ -150,8 +150,6 @@
 		    <div class="section-title">
 			    <h2>Ramblings</h2>
 
-i love you julie
-
 
 			<!--<hr class="my-4">  divide for blog?-->
 			<div id="myBlog"></div>
@@ -181,9 +179,9 @@ i love you julie
  	for (let i=0; i < data.length; i++)	 { 
 
 		var j = JSON.stringify(data[i]);
-		body = JSON.parse(j).results[0]["post"];
-		title = JSON.parse(j).results[0]["title"];
-		dt = JSON.parse(j).results[0]["dt"];
+		body = JSON.parse(j).blg[0]["post"];
+		title = JSON.parse(j).blg[0]["title"];
+		dt = JSON.parse(j).blg[0]["dt"];
 
 		var blogPost = document.createElement("div"); 
 		blogPost.className = "post-preview"; // over arching class for all to be appended to 
