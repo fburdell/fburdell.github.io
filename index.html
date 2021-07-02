@@ -206,17 +206,18 @@ I competed springboard in college and fell in love with print making at some poi
                         </p>
                     </div>-->
 <script>
-
+console.log('hello')
   var jsonBlog  = 'https://fburdell.github.io/blogs/blog.json'
 
   var blogPost = document.createElement("div"); 
   blogPost.className = "post-preview"; // over arching class for all to be appended to 
   // do not write anything to this
 
+
   $.getJSON(jsonBlog, function( data ) { 
-	console.log(data);
 	$.each( data, function( key, val ) { 
-		console.log( val ) ; });
+		console.log( key + val )  ;
+});
 
 document.getElementById("myBlog").appendChild(blogPost); // add blog post to the document
 });
