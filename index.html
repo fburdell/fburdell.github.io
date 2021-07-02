@@ -206,12 +206,18 @@ I competed springboard in college and fell in love with print making at some poi
                         </p>
                     </div>-->
 <script>
+
   var jsonBlog  = 'https://fburdell.github.io/blogs/blog.json'
 
+  var blogPost = document.createElement("div"); 
+  blogPost.className = "post-preview"; // over arching class for all to be appended to 
+  // do not write anything to this
+
+  blgs = [];
+
   $.getJSON(jsonBlog, function( data ) { 
-	  var blogPost = document.createElement("div"); 
-	  blogPost.className = "post-preview"; // over arching class for all to be appended to 
-	  // do not write anything to this
+	blgs = data;
+	console.log(blgs);
 
  	for (var i=0; i < data.length; i++)	 { 
 
@@ -219,7 +225,7 @@ I competed springboard in college and fell in love with print making at some poi
 		body = JSON.parse(j).blg[0]["post"];
 		title = JSON.parse(j).blg[0]["title"];
 		dt = JSON.parse(j).blg[0]["dt"];
-
+		
 
 		var blogTitle = document.createElement("h3");
 		blogTitle.className = "post-title";
@@ -247,12 +253,9 @@ I competed springboard in college and fell in love with print making at some poi
 		blogPost.appendChild(blogBody); // add the blog post to the list of blog posts
 		blogPost.appendChild(blogLiner); // add the blog post to the list of blog posts
 
-} 
-  document.getElementById("myBlog").appendChild(blogPost); // add blog post to the document
+}});
 
-}
-);
-
+document.getElementById("myBlog").appendChild(blogPost); // add blog post to the document
 
 </script>
 

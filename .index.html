@@ -1,0 +1,38 @@
+
+for (var i=0; i < data.length; i++)	 { 
+		console.log(JSON.stringify(data[i]))
+
+
+		var j = JSON.stringify(data[i]);
+		body = JSON.parse(j).blg[0]["post"];
+		title = JSON.parse(j).blg[0]["title"];
+		dt = JSON.parse(j).blg[0]["dt"];
+		
+
+		var blogTitle = document.createElement("h3");
+		blogTitle.className = "post-title";
+		var txtTitle = document.createTextNode(title);
+		blogTitle.appendChild(txtTitle);
+
+		var blogDate = document.createElement("h5"); 
+		blogDate.className = "post-subtitle";
+		var txtBody = document.createTextNode(dt);
+		blogDate.appendChild(txtBody);
+
+		var blogBody = document.createElement("p"); 
+		blogBody.className = "post-meta";
+		var txtBody = document.createTextNode(body);
+		blogBody.appendChild(txtBody);
+
+		var blogLiner = document.createElement("hr");
+		blogLiner.className = "my-4";
+	
+
+		var bp = blogTitle.appendChild(blogBody);
+	
+		blogPost.appendChild(blogTitle); // add the blog post to the list of blog posts
+		blogPost.appendChild(blogDate); // add the blog post to the list of blog posts
+		blogPost.appendChild(blogBody); // add the blog post to the list of blog posts
+		blogPost.appendChild(blogLiner); // add the blog post to the list of blog posts
+
+}}
