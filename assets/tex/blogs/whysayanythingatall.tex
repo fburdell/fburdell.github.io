@@ -1,0 +1,61 @@
+
+%%CLASS TYPE
+\documentclass[8pt]{article}
+
+ %%MARGIN SETTING
+\usepackage{lmodern}
+%%\renewcommand*\familydefault{\sfdefault} %% Only if the base font of the document is to be sans serif
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper, total={7in, 9.5in}]{geometry} %%true a4 8.25 x 11.75
+\usepackage{changepage}
+
+%%MATH PACKAGES
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{mathtools}
+
+\usepackage{textpos} %%ABSOLUTE POSITION TEXT BOX
+\usepackage{hyperref} %%hyperlinks
+\usepackage{enumitem} %%lists
+\usepackage{fullminipage} %%text boxes?
+\usepackage{lipsum} %%lorem ipsum strings
+\usepackage{multicol} %%columsn
+\setlength{\multicolsep}{0pt} %%seperator for columns
+ 
+\usepackage{titlesec} %%unenumerated sections
+\titlespacing\section{0pt}{0pt}{0pt} %%unenumerated sections 
+\titlespacing\subsection{0pt}{0pt}{0pt} %%unenumerated sections
+\titlespacing\subsubsection{0pt}{0pt}{0pt} %%unenumerated sections
+
+
+
+\usepackage{array}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
+\usepackage{ragged2e}
+
+\setlength{\parindent}{0pt} %%indents for paragraphs
+
+\begin{document} %%class instantiation
+\begin{center}
+\thispagestyle{empty}
+	\textbf{Why say anything at all...} \\[0pt]
+
+\line(1,0){400}\\[10pt]
+	%%\textbf{Objective}: [placeholding]\\[0pt]
+	%%\line(1,0){550}\\[0pt]
+\end{center}
+
+
+6 July 2020 -- We'll be right back with more, right after this.
+
+\begin{center}
+	\textbf{\Large{\#\#\#}} \\
+\end{center}
+
+\thispagestyle{empty}
+\begin{textblock*}{300mm}(1000mm,1000mm)
+\end{textblock*}
+\end{document}
+
