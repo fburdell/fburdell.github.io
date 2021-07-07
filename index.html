@@ -186,8 +186,18 @@ I competed springboard in college and fell in love with print making at some poi
 
 
 			<!--<hr class="my-4">  divide for blog?-->
-			<div id="myBlog"></div>
-			<div id="images"></div>
+			<div id="myBlog">
+				<div class="post-preview">
+					<a href="post.html">
+					    <h3 href="https:///fburdell.github.io/assets/tex/blogs/sdf-crop.pdf", class="post-title">a post</h3>
+					</a>
+					<p class="post-meta">
+						today
+					</p>
+				    </div>
+
+
+			</div>
 
 		    </div>
 	    </div>
@@ -205,25 +215,6 @@ I competed springboard in college and fell in love with print making at some poi
 				today
                         </p>
                     </div>-->
-<script>
-var jsonBlog  = 'https://fburdell.github.io/blogs/blog.json'
-
-var blogPost = document.createElement("div"); 
-blogPost.className = "post-preview"; // over arching class for all to be appended to 
-// do not write anything to this
-
-fetch(jsonBlog)
- .then( function({ res )  => return res.json()}; )
- .then((out) => { 
-	console.log(out)
-})
- .catch(err => { throw err });
-
-
-document.getElementById("myBlog").appendChild(blogPost); // add blog post to the document
-
-
-</script>
 
 
   <!-- Vendor JS Files -->
