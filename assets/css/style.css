@@ -1156,13 +1156,13 @@ section {
 /*--------------------------------------------------------------
 # Why Section
 --------------------------------------------------------------*/
-#denali {
+#why {
   width: 100%; height: 100vh;
-  background: url("../img/reds-1-0.jpg") top center;
+  background: url("../img/treebend.jpg") top center;
   background-size: cover;
 }
 
-#denali:before {
+#why:before {
   content: "";
   background: rgba(5, 13, 24, 0.3);
   position: absolute;
@@ -1173,13 +1173,13 @@ section {
   z-index: 1;
 }
 
-#denali .denali-container {
+#why .why-container {
   position: relative;
   z-index: 2;
   min-width: 300px;
 }
 
-#denali h1 {
+#why h1 {
   margin: 0 0 10px 0;
   font-size: 64px;
   font-weight: 700;
@@ -1187,14 +1187,14 @@ section {
   color: #fff;
 }
 
-#denali p {
+#why p {
   color: #fff;
   margin-bottom: 50px;
   font-size: 26px;
   font-family: "Poppins", sans-serif;
 }
 
-#denali p span {
+#why p span {
   color: #fff;
   padding-bottom: 4px;
   letter-spacing: 1px;
@@ -1202,17 +1202,17 @@ section {
 }
 
 @media (min-width: 1024px) {
-  #denali {
+  #why {
     background-attachment: fixed;
   }
 }
 
 @media (max-width: 768px) {
-  #denali h1 {
+  #why h1 {
     font-size: 28px;
     line-height: 36px;
   }
-  #denali h2 {
+  #why h2 {
     font-size: 18px;
     line-height: 24px;
     margin-bottom: 30px;
